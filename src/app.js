@@ -61,3 +61,4 @@ window.onload = generateRandomCard();
 btn.addEventListener("click", function() {
   generateRandomCard();
 });
+setInterval(generateRandomCard, 5000);
