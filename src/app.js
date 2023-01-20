@@ -2,8 +2,8 @@
 import "bootstrap";
 import "./style.css";
 
-const suits = ["Hearts", "Spades", "Clubs", "Diamonds"];
-const numbers = [
+const palo = ["Hearts", "Spades", "Clubs", "Diamonds"];
+const numeros = [
   "2",
   "3",
   "4",
@@ -19,33 +19,33 @@ const numbers = [
   "Ace"
 ];
 
-var suit1 = document.querySelector("#firstsuit");
-var suit2 = document.querySelector("#secondsuit");
-var number = document.querySelector("h2");
+var palo1 = document.querySelector("#primerpalo");
+var palo2 = document.querySelector("#segundopalo");
+var numero = document.querySelector("h2");
 var btn = document.querySelector("#button");
 
 function generateRandomCard() {
-  //generando un número aleatorio para seleccionar un suit
-  var randomSuit = suits[Math.floor(Math.random() * suits.length)];
-  //generando un número aleatorio para seleccionar un number
-  var randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+  //generando un número aleatorio para seleccionar un palo
+  var randomPalo = palo[Math.floor(Math.random() * palo.length)];
+  //generando un número aleatorio para seleccionar un número
+  var randomnumero = numeros[Math.floor(Math.random() * numeros.length)];
 
   //Modifico el contenido del h1 por el número generado
-  number.innerHTML = randomNumber;
+  numero.innerHTML = randomnumero;
 
   //modifico el color según el "palo/traje"
-  if (randomSuit === "Hearts") {
-    suit1.style.color = suit2.style.color = "red";
-    suit1.innerHTML = suit2.innerHTML = "♥";
-  } else if (randomSuit === "Diamonds") {
-    suit1.style.color = suit2.style.color = "red";
-    suit1.innerHTML = suit2.innerHTML = "♦";
-  } else if (randomSuit === "Spades") {
-    suit1.innerHTML = suit2.innerHTML = "♠";
-    suit1.style.color = suit2.style.color = "black";
-  } else if (randomSuit === "Clubs") {
-    suit1.innerHTML = suit2.innerHTML = "♣";
-    suit1.style.color = suit2.style.color = "black";
+  if (randomPalo === "Hearts") {
+    palo1.style.color = palo2.style.color = "red";
+    palo1.innerHTML = palo2.innerHTML = "♥";
+  } else if (randomPalo === "Diamonds") {
+    palo1.style.color = palo2.style.color = "red";
+    palo1.innerHTML = palo2.innerHTML = "♦";
+  } else if (randomPalo === "Spades") {
+    palo1.innerHTML = palo2.innerHTML = "♠";
+    palo1.style.color = palo2.style.color = "black";
+  } else if (randomPalo === "Clubs") {
+    palo1.innerHTML = palo2.innerHTML = "♣";
+    palo1.style.color = palo2.style.color = "black";
   }
 }
 
