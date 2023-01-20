@@ -35,25 +35,17 @@ function generateRandomCard() {
 
   //modifico el color según el "palo/traje"
   if (randomSuit === "Hearts") {
-    suit1.style.color = "red";
-    suit2.style.color = "red";
-    suit1.innerHTML = "♥";
-    suit2.innerHTML = "♥";
+    suit1.style.color = suit2.style.color = "red";
+    suit1.innerHTML = suit2.innerHTML = "♥";
   } else if (randomSuit === "Diamonds") {
-    suit1.style.color = "red";
-    suit2.style.color = "red";
-    suit1.innerHTML = "♦";
-    suit2.innerHTML = "♦";
+    suit1.style.color = suit2.style.color = "red";
+    suit1.innerHTML = suit2.innerHTML = "♦";
   } else if (randomSuit === "Spades") {
-    suit1.innerHTML = "♠";
-    suit2.innerHTML = "♠ ";
-    suit1.style.color = "black";
-    suit2.style.color = "black";
+    suit1.innerHTML = suit2.innerHTML = "♠";
+    suit1.style.color = suit2.style.color = "black";
   } else if (randomSuit === "Clubs") {
-    suit1.innerHTML = "♣";
-    suit2.innerHTML = "♣ ";
-    suit1.style.color = "black";
-    suit2.style.color = "black";
+    suit1.innerHTML = suit2.innerHTML = "♣";
+    suit1.style.color = suit2.style.color = "black";
   }
 }
 
