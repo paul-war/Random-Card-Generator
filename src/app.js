@@ -33,7 +33,7 @@ function generateRandomCard() {
   //Modifico el contenido del h1 por el número generado
   number.innerHTML = randomNumber;
 
-  //modifico el color del "palo/traje"
+  //modifico el color según el "palo/traje"
   if (randomSuit === "Hearts") {
     suit1.style.color = "red";
     suit2.style.color = "red";
@@ -47,10 +47,17 @@ function generateRandomCard() {
   } else if (randomSuit === "Spades") {
     suit1.innerHTML = "♠";
     suit2.innerHTML = "♠ ";
-  } else {
+    suit1.style.color = "black";
+    suit2.style.color = "black";
+  } else if (randomSuit === "Clubs") {
     suit1.innerHTML = "♣";
     suit2.innerHTML = "♣ ";
+    suit1.style.color = "black";
+    suit2.style.color = "black";
   }
 }
 
 window.onload = generateRandomCard();
+btn.addEventListener("click", function() {
+  generateRandomCard();
+});
