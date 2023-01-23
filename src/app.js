@@ -1,6 +1,6 @@
 /* eslint-disable */
 import "bootstrap";
-import "./style.css";
+import "./styles.css";
 
 const palo = ["Hearts", "Spades", "Clubs", "Diamonds"];
 const numeros = [
